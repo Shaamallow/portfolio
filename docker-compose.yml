@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  coupedelx-frontend:
+    container_name: bds
+    build: .
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.bds.entrypoints=websecure"
+      - "traefik.http.routers.bds.rule=Host(`bds.shaamallow.com`)"
+
+networks:
+  web:
+    external: true
