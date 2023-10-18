@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import { fade } from 'svelte/transition';
 	import catppuccin from '$lib/assets/catppuccin-icon-light.png';
+	import c2x from '$lib/assets/c2x.png';
 
 	export let data: PageData;
 </script>
@@ -44,7 +45,6 @@
 		<div class="text-center max-w-md">
 			French engineering student, AI major, Volleyball player and heavy music enjoyer
 		</div>
-		<div class="text-center text-secondary italic">Hover for catchy animation</div>
 	</div>
 
 	<div class="md" />
@@ -63,7 +63,9 @@
 	>
 		<div class="md:flex justify-stretch items-center">
 			<div class="flex justify-center p-3 pb-0 md:m-5">
-				<div class="aspect-square rounded-full mx-auto flex lg:max-w-sm max-w-sm md:min-w-[13rem]">
+				<div
+					class="aspect-square rounded-full mx-auto flex lg:max-w-sm max-w-[8rem] md:min-w-[13rem]"
+				>
 					<img src={catppuccin} alt="profile" />
 				</div>
 			</div>
@@ -79,7 +81,7 @@
 			</div>
 		</div>
 
-		<div class="flex flex-col items-center md:flex-row justify-around pb-5">
+		<div class="flex flex-col items-center md:flex-row justify-around pb-5 gap-4">
 			<a href="https://github.com/catppuccin/catppuccin/stargazers"
 				><img
 					alt="Stargazers"
@@ -104,52 +106,53 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col items-center justify-stretch mb-40 mt-20 group max-w-3xl mx-auto">
+	<div class="flex flex-col items-center justify-stretch mb-30 mt-20 group max-w-3xl mx-auto">
 		<h1 class="font-display text-xl md:text-3xl font-bold bg-clip-text bg-secondary mb-3">
 			The Tech Stack
 		</h1>
 
-		<div class="flex justify-center items-center mt-3 mb-6 gap-4">
-			<div>Svelte</div>
-			<div>Typescript</div>
-			<div>Tailwind</div>
+		<div class="flex justify-center items-center my-3 gap-4 md:gap-10">
+			<a href="https://svelte.dev" target="_blank">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png"
+					alt="svelte"
+					class="mt-3 w-20"
+				/>
+			</a>
+			<a href="https://www.typescriptlang.org/" target="_blank">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
+					alt="typescript"
+					class="mt-3 w-20"
+				/>
+			</a>
+			<a href="https://tailwindcss.com" target="_blank">
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png"
+					alt="tailwind"
+					class="mt-3 w-20"
+				/>
+			</a>
 		</div>
-		<div class="italic">Mettre des icones</div>
 	</div>
 
 	<!-- PROJECTS FROM HERE -->
-	<div class="divider m-20" />
+	<div class="divider m-10" />
 
 	<div class="flex flex-col items-center justify-stretch m-20 group max-w-3xl mx-auto">
-		<h1 class="font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary mb-3">
+		<h1 class="font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary mb-10">
 			Recent Projects
 		</h1>
-	</div>
 
-	<div
-		class="max-w-md md:max-w-5xl mx-auto rounded-[1rem] bg-neutral shadow-xl
-		md:hover:scale-105 md:hover:translate-y-4 transition duration-200
-		focus:outline-2 focus:outline focus:outline-transparent"
-	>
-		<div class="md:flex justify-stretch items-center">
-			<div class="flex justify-center p-3 pb-0 md:m-5">
-				<div class="aspect-square rounded-full mx-auto flex lg:max-w-sm max-w-sm md:min-w-[13rem]">
-					<img src={catppuccin} alt="profile" />
-				</div>
+		<a href="https://coupedelx.binets.fr" target="_blank">
+			<div
+				class="w-58 md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
+		focus:outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 trannsition duration-200 md:hover:scale-105"
+			>
+				<img src={c2x} alt="Affiche Coupe de l'X" />
 			</div>
-
-			<div class="text-center p-3">
-				<h2 class="font-bold">Theming</h2>
-				<p>
-					This website was made using the catppuccin color palette. Catppuccin is a community-driven
-					pastel theme that aims to be the middle ground between low and high contrast themes. It
-					consists of 4 soothing warm palettes with 26 eye-candy colors each, perfect for coding,
-					designing, and much more! More information available on github
-				</p>
-			</div>
-		</div>
+		</a>
 	</div>
-
 	<div class="divider m-20" />
 </div>
 
@@ -182,4 +185,3 @@
 		}
 	}
 </style>
-
