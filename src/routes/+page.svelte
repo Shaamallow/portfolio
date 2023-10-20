@@ -43,7 +43,7 @@
 			<div class="font-display text-lg">Ecole Polytechnique, France</div>
 		</div>
 		<div class="text-center max-w-md">
-			French engineering student, AI major, Volleyball player and heavy music enjoyer
+			French engineering student, Computer Sience Major, Volleyball player and heavy music enjoyer
 		</div>
 	</div>
 
