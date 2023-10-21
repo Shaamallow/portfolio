@@ -14,7 +14,7 @@
 <div class="mx-auto p-4 md:px-20">
 	<div class="flex flex-col items-center justify-stretch mb-40 mt-20 group max-w-3xl mx-auto">
 		<h1
-			class="font-display text-5xl md:text-7xl font-bold bg-clip-text bg-secondary hover:text-transparent anim-gradient pb-3"
+			class="font-display text-5xl md:text-7xl font-bold bg-clip-text bg-secondary group-hover:text-transparent anim-gradient pb-3"
 		>
 			Hi, I'm Eyal
 		</h1>
@@ -169,7 +169,7 @@
 		);
 
 		background-size: 360% 360%;
-		animation: gradient-animation 15s ease infinite;
+		animation: gradient-animation 10s ease infinite;
 	}
 
 	/*Keyframes*/
