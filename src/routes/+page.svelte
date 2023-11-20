@@ -20,14 +20,21 @@
 {#if loaded}
 	<div in:fade={{ duration: 400, delay: 100 }} class="mx-auto p-4 md:px-20">
 		<div
-			class="flex flex-col items-center justify-stretch mb-20 md:mb-40 mt-20 group max-w-3xl mx-auto"
+			class="flex flex-col items-center justify-stretch mb-20 md:mb-40 md:mt-20 mt-5 group max-w-3xl mx-auto"
 		>
-			<h1
-				id="hello"
-				class="font-display text-5xl md:text-7xl font-bold bg-clip-text bg-secondary group-hover:text-transparent anim-gradient pb-3"
-			>
-				Hi, I'm Eyal
-			</h1>
+			<div class="md:flex block justify-center items-center md:mt-3 mb-6">
+				<img
+					src="/profile.jpg"
+					alt=""
+					class=" rounded-full mx-auto flex lg:max-w-[20rem] max-w-[10rem] md:mr-10 mb-5"
+				/>
+				<h1
+					id="hello"
+					class="text-center font-display text-5xl md:text-7xl font-bold bg-clip-text bg-secondary group-hover:text-transparent anim-gradient pb-3"
+				>
+					Hi, I'm Eyal
+				</h1>
+			</div>
 			<div class="flex justify-center items-center mt-3 mb-6">
 				<svg
 					class="w-[18px] h-[18px] mr-1"

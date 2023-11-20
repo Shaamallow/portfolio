@@ -18,5 +18,7 @@
 			I'm a french 3rd year student at Ecole Polytechnique, majoring in Computer Vision. I'm also a
 			big fan of Volleyball
 		</p>
+
+		<a href="/cv.pdf">Here is my Resume</a>
 	</div>
 </main>
