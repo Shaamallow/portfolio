@@ -25,11 +25,48 @@
 			class="navbar bg-neutral/70 shadow-xl w-screen fixed h-12 z-10 backdrop-blur-md border-b border-neutral/20"
 		>
 			<!--NAVBAR-->
+
 			<div class="navbar-start">
-				<a class="btn btn-ghost normal-case text-xl" href="/">Shaamallow</a>
+				<div class="dropdown lg:hidden">
+					<div tabIndex={0} class="btn btn-ghost">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h8m-8 6h16"
+							/></svg
+						>
+					</div>
+					<ul
+						tabIndex={0}
+						class="menu menu-sm p-3 dropdown-content bg-neutral/70 backdrop-blur-md rounded-box mt-3"
+					>
+						<li class="grid"><a href="/about">About</a></li>
+						<li class="grid"><a href="/projects">Projects</a></li>
+						<li class="grid"><a href="/blog">Blog</a></li>
+						<li class="grid"><a href="/contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="hidden lg:flex">
+					<a class="btn btn-ghost" href="/about">About</a>
+					<a class="btn btn-ghost" href="/projects">Projects</a>
+					<a class="btn btn-ghost" href="/blog">Blog</a>
+					<a class="btn btn-ghost" href="/contact">Contact</a>
+				</div>
 			</div>
 
 			<div class="navbar-center">
+				<a class="btn btn-ghost normal-case text-xl" href="/">Shaamallow</a>
+			</div>
+
+			<div class="navbar-end mr-2">
 				<label class="swap swap-rotate">
 					<!-- this hidden checkbox controls the state -->
 					<input
@@ -57,42 +94,6 @@
 						/></svg
 					>
 				</label>
-			</div>
-
-			<div class="navbar-end">
-				<div class="dropdown dropdown-end lg:hidden">
-					<div tabIndex={0} class="btn btn-ghost">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-5 w-5"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							><path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M4 6h16M4 12h8m-8 6h16"
-							/></svg
-						>
-					</div>
-					<ul
-						tabIndex={0}
-						class="menu menu-sm p-3 dropdown-content bg-neutral/70 backdrop-blur-md rounded-box mt-3 w-52"
-					>
-						<li class="grid place-items-center"><a href="/about">About</a></li>
-						<li class="grid place-items-center"><a href="/projects">Projects</a></li>
-						<li class="grid place-items-center"><a href="/blog">Blog</a></li>
-						<li class="grid place-items-center"><a href="/contact">Contact</a></li>
-					</ul>
-				</div>
-
-				<div class="hidden lg:flex">
-					<a class="btn btn-ghost" href="/about">About</a>
-					<a class="btn btn-ghost" href="/projects">Projects</a>
-					<a class="btn btn-ghost" href="/blog">Blog</a>
-					<a class="btn btn-ghost" href="/contact">Contact</a>
-				</div>
 			</div>
 		</div>
 

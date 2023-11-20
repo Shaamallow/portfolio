@@ -20,7 +20,7 @@
 {#if loaded}
 	<div in:fade={{ duration: 400, delay: 100 }} class="mx-auto p-4 md:px-20">
 		<div
-			class="flex flex-col items-center justify-stretch mb-20 md:mb-40 md:mt-20 mt-5 group max-w-3xl mx-auto"
+			class="flex flex-col items-center justify-stretch mb-20 md:mb-40 md:mt-11 mt-5 group max-w-3xl mx-auto"
 		>
 			<div class="md:flex block justify-center items-center md:mt-3 mb-6">
 				<img

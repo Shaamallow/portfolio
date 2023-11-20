@@ -11,7 +11,7 @@ List of changes and implementations for the portfolio website
   - [ ] Reimplement the theme function using the session cookie in the navigator
   - [ ] Make sure the onMount() is loading properly the theme cookie
 
-- [ ] Change disposition of the navbar to have in this order : **burger menu** | Shaamallow | theme switcher
+- [x] Change disposition of the navbar to have in this order : **burger menu** | Shaamallow | theme switcher
 - [ ] Have a menu come from the left when the burger menu is clicked
 
 ### Home
@@ -27,9 +27,9 @@ List of changes and implementations for the portfolio website
 
 - [ ] Add a picture of me
 - [ ] Add a short description of me
-- [ ] Add a my CV
+- [x] Add a my CV
   - [ ] Create a display for passions, experiences, education, skills and languages
-  - [ ] Find how to serve a pdf file from the server
+  - [x] Find how to serve a pdf file from the server
 - [ ] Find a format for the blog (might be useful to use [QWER](https://github.com/kwchang0831/svelte-QWER))
 - [ ] Add much more projects cards to the projects section
   - [ ] Find a meta data format for projects
