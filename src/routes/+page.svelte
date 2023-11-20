@@ -2,7 +2,6 @@
 	import type { PageData } from './$types';
 	import { fade } from 'svelte/transition';
 	import catppuccin from '$lib/assets/catppuccin-icon-light.png';
-	import c2x from '$lib/assets/c2x.png';
 	import { onMount } from 'svelte';
 
 	export let data: PageData;
@@ -167,9 +166,9 @@
 			<a href="https://coupedelx.binets.fr" target="_blank">
 				<div
 					class="w-58 md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
-		focus:outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 trannsition duration-200 md:hover:scale-105"
+		focus:outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 transition duration-200 md:hover:scale-105"
 				>
-					<img src={c2x} alt="Affiche Coupe de l'X" />
+					<img src="/c2x.png" alt="Affiche Coupe de l'X" />
 				</div>
 			</a>
 		</div>
