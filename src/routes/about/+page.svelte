@@ -19,6 +19,6 @@
 			big fan of Volleyball
 		</p>
 
-		<a href="/cv.pdf">Here is my Resume</a>
+		<a href="/cv.pdf" target="_blank">Here is my Resume</a>
 	</div>
 </main>
