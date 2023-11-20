@@ -3,14 +3,19 @@
 	import TypeWriter from 'svelte-typewriter';
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
 	import { themeChange } from 'theme-change';
 
-	let greetings = ['Hello there !', 'Welcome aboard Captain', 'Hail on deck'].sort(
-		() => Math.random() - 0.5
-	);
+	let greetings = ['Hello there !', 'Welcome aboard Captain', 'Hail on deck'];
+	let i_0 = Math.floor(Math.random() * greetings.length);
 
 	onMount(() => {
 		themeChange(false);
+	});
+
+	// sort the greetings array randomly after each navigation
+	afterNavigate(() => {
+		i_0 = Math.floor(Math.random() * greetings.length);
 	});
 </script>
 
@@ -94,7 +99,7 @@
 		<div class="grid place-items-center flex-grow mt-12">
 			<h1 class="font-display text-center text-4xl md:text-8xl font-bold text-white">
 				<TypeWriter delay={200}>
-					{greetings[0]}
+					{greetings[i_0]}
 				</TypeWriter>
 			</h1>
 		</div>
