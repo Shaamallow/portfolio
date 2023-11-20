@@ -9,7 +9,7 @@ List of changes and implementations for the portfolio website
 - [ ] Add the theme switcher to the navbar
 
   - [ ] Reimplement the theme function using the session cookie in the navigator
-  - [ ] Make sure the onMoun() is loading properly the theme cookie
+  - [ ] Make sure the onMount() is loading properly the theme cookie
 
 - [ ] Change disposition of the navbar to have in this order : **burger menu** | Shaamallow | theme switcher
 - [ ] Have a menu come from the left when the burger menu is clicked
@@ -18,6 +18,8 @@ List of changes and implementations for the portfolio website
 
 - [ ] Add dynamic background to the home page to get attention (small cubes reactive to the mouse position)
 - [ ] Add fading animation for the cards on the home page
+  - [ ] Instead of raw code for everything, use the OnMount behaviour to load the data and the cards
+  - [ ] Add fading animations for everything on the home page (Start description, cards and else)
 
 ## Content changes
 

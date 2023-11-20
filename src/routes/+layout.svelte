@@ -1,11 +1,22 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
+	import TypeWriter from 'svelte-typewriter';
 	import '../app.css';
 	export let data: LayoutData;
+
+	let ctx = {
+		delay: 600,
+		interval: 100,
+		mode: 'loopOnce'
+	};
+
+	let greetings = ['Hello there !', 'Welcome aboard Captain', 'Hail on deck'].sort(
+		() => Math.random() - 0.5
+	);
 </script>
 
 <main>
-	<div class="anim-gradient flex flex-col h-96">
+	<div class="anim-gradient flex flex-col h-56 md:h-96">
 		<div
 			class="navbar bg-neutral/70 shadow-xl w-screen fixed h-12 z-10 backdrop-blur-md border-b border-neutral/20"
 		>
@@ -68,7 +79,9 @@
 
 		<div class="grid place-items-center flex-grow mt-12">
 			<h1 class="font-display text-center text-4xl md:text-8xl font-bold text-white">
-				Welcome aboard Captain
+				<TypeWriter delay={200}>
+					{greetings[0]}
+				</TypeWriter>
 			</h1>
 		</div>
 	</div>
@@ -89,7 +102,7 @@
 		);
 
 		background-size: 360% 360%;
-		animation: gradient-animation 36s ease infinite;
+		animation: gradient-animation 24s ease infinite;
 	}
 
 	/*Keyframes*/

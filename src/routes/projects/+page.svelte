@@ -6,7 +6,7 @@
 	<title>Projects</title>
 </svelte:head>
 
-<main class="mx-auto p-4 md:p-20">
+<main in:fade={{ duration: 400, delay: 100 }} class="mx-auto p-4 md:p-20">
 	<div class="flex flex-col items-center justify-stretch mb-40 mt-12 group max-w-3xl mx-auto">
 		<h1
 			class="font-display text-center text-5xl md:text-7xl font-bold bg-clip-text bg-secondary mb-3"
