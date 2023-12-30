@@ -1,10 +1,6 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import { fade } from 'svelte/transition';
-	import catppuccin from '$lib/assets/catppuccin-icon-light.png';
 	import { onMount } from 'svelte';
-
-	export let data: PageData;
 
 	let loaded = false;
 	onMount(() => {
@@ -83,12 +79,12 @@
 						<div
 							class="aspect-square rounded-full mx-auto flex lg:max-w-sm max-w-[8rem] md:min-w-[13rem]"
 						>
-							<img src={catppuccin} alt="profile" />
+							<img src="\catppuccin_light.png" alt="profile" />
 						</div>
 					</div>
 
 					<div class="text-center p-3">
-						<h2 class="font-bold">Theming</h2>
+						<h2 class="font-bold text-3xl">Theming</h2>
 						<p class="text-justify">
 							This website was made using the catppuccin color palette. Catppuccin is a
 							community-driven pastel theme that aims to be the middle ground between low and high

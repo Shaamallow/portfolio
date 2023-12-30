@@ -47,7 +47,7 @@
 
 		<div class="divider m-10" />
 
-		<a href="https://github.com/Shaamallow/Volleyball-tracking-vision" target="_blank">
+		<a href="https://github.com/Shaamallow/VolleyVision" target="_blank">
 			<div
 				class="w-58 md:h-[24rem] md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
       focus outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 transition duration-200 md:hover:scale-105"

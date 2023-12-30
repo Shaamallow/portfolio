@@ -51,6 +51,15 @@
 			Education
 		</h2>
 
+		<div class="flex">
+			<span class="overflow-hidden">
+				<svg class=" w-[10px]">
+					<circle cx="5" cy="15" r="5" fill="hsl(var(--p))" />
+				</svg>
+			</span>
+			<h3 class="mx-3">Ecole Polytechnique</h3>
+		</div>
+
 		<div class="divider m-10" />
 
 		<h2
