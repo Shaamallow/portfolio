@@ -1,18 +1,16 @@
 version: '3.7'
 
 services:
-  coupedelx-frontend:
-    container_name: bds
+  portfolio:
+    container_name: portfolio
     build: .
     restart: unless-stopped
-    ports:
-      - '3000:3000'
     networks:
       - web
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.bds.entrypoints=websecure"
-      - "traefik.http.routers.bds.rule=Host(`bds.shaamallow.com`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.rule=Host(`shaamallow.com`)"
 
 networks:
   web:
