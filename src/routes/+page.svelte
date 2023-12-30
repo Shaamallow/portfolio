@@ -13,23 +13,16 @@
 </svelte:head>
 
 {#if loaded}
-	<div in:fade={{ duration: 400, delay: 100 }} class="mx-auto p-4 md:px-20">
-		<div
-			class="flex flex-col items-center justify-stretch mb-20 md:mb-40 md:mt-11 mt-5 group max-w-3xl mx-auto"
-		>
-			<div class="md:flex block justify-center items-center md:mt-3 mb-6">
-				<img
-					src="/profile.jpg"
-					alt=""
-					class=" rounded-full mx-auto flex lg:max-w-[20rem] max-w-[10rem] md:mr-10 mb-5"
-				/>
-				<h1
-					id="hello"
-					class="text-center font-display text-5xl md:text-7xl font-bold bg-clip-text bg-secondary group-hover:text-transparent anim-gradient pb-3"
-				>
-					Hi, I'm Eyal
-				</h1>
-			</div>
+	<div in:fade={{ duration: 400, delay: 100 }} class="mx-auto">
+		<div class="flex flex-col items-center justify-stretch my-20 mx-auto px-4">
+			<img src="/avatar.jpg" alt="" class="rounded-full w-[10rem] md:w-[20rem]" />
+			<h1
+				id="hello"
+				class="text-center font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary group-hover:text-transparent anim-gradient pb-3"
+			>
+				Eyal Benaroche
+			</h1>
+			<div class="text-center max-w-md">French Engineering Student <strong>@</strong></div>
 			<div class="flex justify-center items-center mt-3 mb-6">
 				<svg
 					class="w-[18px] h-[18px] mr-1"
@@ -54,72 +47,17 @@
 				>
 				<div class="font-display text-lg">Ecole Polytechnique, France</div>
 			</div>
-			<div class="text-center max-w-md">
-				French engineering student, Computer Sience Major, Volleyball player and heavy music enjoyer
-			</div>
 		</div>
 
-		<div class="md" />
+		<div class="divider my-[20rem]" />
 
-		<div class="flex flex-col items-center justify-stretch mb-10 group max-w-3xl mx-auto">
+		<div class="flex flex-col items-center justify-stretch mb-10 group max-w-3xl mx-auto px-4">
 			<h1 class="font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary mb-3">
 				More on the website
 			</h1>
 		</div>
 
 		<!--	CARD Catppuccin   -->
-		<a href="https://catppuccin-website.vercel.app/" target="_blank">
-			<div
-				class="max-w-md md:max-w-5xl mx-auto rounded-[1rem] bg-neutral shadow-xl
-		md:hover:scale-105 md:hover:translate-y-4 transition duration-200
-		focus:outline-2 focus:outline focus:outline-transparent"
-			>
-				<div class="md:flex justify-stretch items-center">
-					<div class="flex justify-center p-3 pb-0 md:m-5">
-						<div
-							class="aspect-square rounded-full mx-auto flex lg:max-w-sm max-w-[8rem] md:min-w-[13rem]"
-						>
-							<img src="\catppuccin_light.png" alt="profile" />
-						</div>
-					</div>
-
-					<div class="text-center p-3">
-						<h2 class="font-bold text-3xl">Theming</h2>
-						<p class="text-justify">
-							This website was made using the catppuccin color palette. Catppuccin is a
-							community-driven pastel theme that aims to be the middle ground between low and high
-							contrast themes. It consists of 4 soothing warm palettes with 26 eye-candy colors
-							each, perfect for coding, designing, and much more! More information available on
-							github
-						</p>
-					</div>
-				</div>
-
-				<div class="flex flex-col items-center md:flex-row justify-around pb-5 gap-4">
-					<a href="https://github.com/catppuccin/catppuccin/stargazers"
-						><img
-							alt="Stargazers"
-							src="https://img.shields.io/github/stars/catppuccin?style=for-the-badge&amp;logo=starship&amp;color=C9CBFF&amp;logoColor=D9E0EE&amp;labelColor=302D41"
-						/></a
-					><a href="https://github.com/catppuccin/catppuccin/releases/latest"
-						><img
-							alt="Releases"
-							src="https://img.shields.io/github/release/catppuccin/catppuccin.svg?style=for-the-badge&amp;logo=github&amp;color=F2CDCD&amp;logoColor=D9E0EE&amp;labelColor=302D41"
-						/></a
-					><a href="https://github.com/catppuccin/catppuccin/issues"
-						><img
-							alt="Issues"
-							src="https://img.shields.io/github/issues/catppuccin/catppuccin?style=for-the-badge&amp;logo=gitbook&amp;color=B5E8E0&amp;logoColor=D9E0EE&amp;labelColor=302D41"
-						/></a
-					><a href="https://discord.catppuccin.com"
-						><img
-							alt="Discord"
-							src="https://img.shields.io/discord/907385605422448742?style=for-the-badge&amp;logo=discord&amp;color=DDB6F2&amp;logoColor=D9E0EE&amp;labelColor=302D41"
-						/></a
-					>
-				</div>
-			</div>
-		</a>
 
 		<div class="flex flex-col items-center justify-stretch mb-30 mt-20 group max-w-3xl mx-auto">
 			<h1 class="font-display text-xl md:text-3xl font-bold bg-clip-text bg-secondary mb-3">
@@ -171,33 +109,3 @@
 		<div class="divider m-20" />
 	</div>
 {/if}
-
-<style>
-	.anim-gradient {
-		background-image: linear-gradient(
-			300deg,
-			rgb(var(--ctp-red)),
-			rgb(var(--ctp-peach)),
-			rgb(var(--ctp-yellow)),
-			rgb(var(--ctp-green)),
-			rgb(var(--ctp-blue)),
-			rgb(var(--ctp-mauve))
-		);
-
-		background-size: 360% 360%;
-		animation: gradient-animation 10s ease infinite;
-	}
-
-	/*Keyframes*/
-	@keyframes gradient-animation {
-		0% {
-			background-position: 0% 50%;
-		}
-		50% {
-			background-position: 100% 50%;
-		}
-		100% {
-			background-position: 0% 50%;
-		}
-	}
-</style>
