@@ -10,6 +10,7 @@ module.exports = {
 		},
 		extend: {}
 	},
+	darkMode: ['class', '[data-mode="catppuccin-frappe"]'],
 	plugins: [
 		require('daisyui'),
 		// eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -22,8 +23,6 @@ module.exports = {
 		themes: [
 			'dark',
 			'light',
-			'synthwave',
-			'night',
 			{
 				'catppuccin-latte': {
 					primary: '#1e66f5', // blue

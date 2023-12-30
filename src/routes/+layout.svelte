@@ -1,13 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { afterNavigate } from '$app/navigation';
+	import Dialog from '$lib/Dialog.svelte';
 	import { themeChange } from 'theme-change';
 
-	let greetings = ['Hello there !', 'Welcome aboard Captain', 'Hail on deck'];
-	let i_0 = Math.floor(Math.random() * greetings.length);
-
 	let navbar: HTMLDivElement;
+	let dialog: Dialog;
 
 	onMount(() => {
 		themeChange(false);
@@ -24,10 +22,23 @@
 	});
 
 	// sort the greetings array randomly after each navigation
-	afterNavigate(() => {
-		i_0 = Math.floor(Math.random() * greetings.length);
-	});
 </script>
+
+<Dialog bind:dialog on:close={() => console.log('OK')}>
+	<form method="dialog">
+		<button class="btn btn-sm btn-circle btn-ghost absolute right-5 top-5"
+			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="30">
+				<path d="M20,20 L80,80 M80,20 L20,80" stroke="currentColor" stroke-width="5" />
+			</svg>
+		</button>
+	</form>
+	<div class="mx-auto flex flex-col justify-center">
+		<a class="btn btn-ghost text-xl" href="/posts">Posts</a>
+		<a class="btn btn-ghost text-xl" href="/projects">Projects</a>
+		<a class="btn btn-ghost text-xl" href="/resume">Resume</a>
+		<a class="btn btn-ghost text-xl" href="/contact">Contact</a>
+	</div>
+</Dialog>
 
 <main>
 	<div class="flex flex-col h-12 mb-[10rem]">
@@ -67,29 +78,21 @@
 					</label>
 				</div>
 
-				<div class="dropdown dropdown-end lg:hidden">
-					<div tabIndex={0} class="btn btn-ghost">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-7 w-7"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							><path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M4 6h16 M4 12h16 M4 18h16"
-							/></svg
-						>
-					</div>
-					<ul tabIndex={0} class="menu menu-sm p-3 dropdown-content rounded-box mt-3">
-						<li class="grid"><a href="/posts">Posts</a></li>
-						<li class="grid"><a href="/projects">Projects</a></li>
-						<li class="grid"><a href="/resume">Resume</a></li>
-						<li class="grid"><a href="/contact">Contact</a></li>
-					</ul>
-				</div>
+				<button class="btn btn-ghost lg:hidden" on:click={() => dialog.showModal()}>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-7 w-7"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						><path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16 M4 12h16 M4 18h16"
+						/></svg
+					>
+				</button>
 
 				<div class="hidden lg:flex">
 					<a class="btn btn-ghost" href="/posts">Posts</a>
@@ -103,7 +106,7 @@
 
 	<div class="fixed inset-x-0 top-0" style="z-index: -10;">
 		<div
-			class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-transparent mix-blend-normal"
+			class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-transparent mix-blend-normal dark:bg-primary"
 		/>
 		<div
 			class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-neutral-800 mix-blend-normal"
