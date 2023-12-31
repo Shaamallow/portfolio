@@ -1,30 +1,31 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import Dialog from '$lib/Dialog.svelte';
-	import { themeChange } from 'theme-change';
+
+	import { lightTheme, toggleTheme } from '$lib/theme.ts';
 
 	let navbar: HTMLDivElement;
 	let dialog: Dialog;
+	let themeatic = false;
 
 	onMount(() => {
-		themeChange(false);
-
 		addEventListener('scroll', () => {
 			// get scroll position
 			// add blur to navbar = 0.5 * scroll position
 
 			let scroll = window.scrollY;
-			let blur = scroll * 0.1;
+			let blur = scroll * 0.05;
 
-			navbar.style.backdropFilter = `blur(${blur}px)`;
+			if (navbar) {
+				navbar.style.backdropFilter = `blur(${blur}px)`;
+			}
 		});
 	});
-
-	// sort the greetings array randomly after each navigation
 </script>
 
-<Dialog bind:dialog on:close={() => console.log('OK')}>
+<Dialog bind:dialog>
 	<form method="dialog">
 		<button class="btn btn-sm btn-circle btn-ghost absolute right-5 top-5"
 			><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="30">
@@ -53,8 +54,9 @@
 						<!-- this hidden checkbox controls the state -->
 						<input
 							type="checkbox"
-							data-toggle-theme="catppuccin-frappe,catppuccin-latte"
-							data-act-class="ACTIVECLASS"
+							class="theme-controller"
+							value="catppuccin-latte"
+							on:change={toggleTheme}
 						/>
 						<!-- sun icon -->
 						<svg
@@ -105,12 +107,22 @@
 	</div>
 
 	<div class="fixed inset-x-0 top-0" style="z-index: -10;">
-		<div
-			class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-transparent mix-blend-normal dark:bg-primary"
-		/>
-		<div
-			class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-neutral-800 mix-blend-normal"
-		/>
+		{#if $lightTheme}
+			<div
+				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral to-transparent mix-blend-normal"
+			/>
+			<div
+				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-neutral-100 mix-blend-normal"
+				transition:fade={{ duration: 200 }}
+			/>
+		{:else}
+			<div
+				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-transparent mix-blend-normal"
+			/>
+			<div
+				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-neutral-800 mix-blend-normal"
+			/>
+		{/if}
 		<img src="/wallpaper.jpg" alt="wallpaper" class="w-full h-[1000px] object-cover m-0 nozoom" />
 	</div>
 

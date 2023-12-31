@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import { lightTheme } from '$lib/theme.ts';
 
 	let loaded = false;
 	onMount(() => {
@@ -15,9 +16,8 @@
 {#if loaded}
 	<div in:fade={{ duration: 400, delay: 100 }} class="mx-auto">
 		<div class="flex flex-col items-center justify-stretch my-20 mx-auto px-4">
-			<img src="/avatar.jpg" alt="" class="rounded-full w-[10rem] md:w-[20rem]" />
+			<img src="/avatar.jpg" alt="" class="rounded-full w-[10rem] md:w-[20rem] mb-4" />
 			<h1
-				id="hello"
 				class="text-center font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary group-hover:text-transparent anim-gradient pb-3"
 			>
 				Eyal Benaroche
@@ -26,7 +26,7 @@
 			<div class="flex justify-center items-center mt-3 mb-6">
 				<svg
 					class="w-[18px] h-[18px] mr-1"
-					fill="hsl(var(--bc))"
+					fill="currentColor"
 					version="1.1"
 					id="Capa_1"
 					xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +56,6 @@
 				More on the website
 			</h1>
 		</div>
-
-		<!--	CARD Catppuccin   -->
 
 		<div class="flex flex-col items-center justify-stretch mb-30 mt-20 group max-w-3xl mx-auto">
 			<h1 class="font-display text-xl md:text-3xl font-bold bg-clip-text bg-secondary mb-3">
@@ -102,7 +100,7 @@
 					class="w-58 md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
 		focus:outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 transition duration-200 md:hover:scale-105"
 				>
-					<img src="/c2x.png" alt="Affiche Coupe de l'X" />
+					<img src="/projects/c2x.png" alt="Affiche Coupe de l'X" />
 				</div>
 			</a>
 		</div>
