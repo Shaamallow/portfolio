@@ -6,7 +6,7 @@
 	<title>About</title>
 </svelte:head>
 
-<main in:fade={{ duration: 400, delay: 100 }} class="mx-auto p-4 md:p-20">
+<main in:fade={{ duration: 400, delay: 100 }} class="mx-auto p-4 md:p-20 transition">
 	<div class="flex flex-col items-center justify-stretch mb-40 mt-12 group max-w-3xl mx-auto">
 		<div class="md:flex block justify-center items-center md:mt-3 mb-6">
 			<h1
@@ -15,7 +15,7 @@
 				About me
 			</h1>
 
-			<a href="/cv.pdf" target="_blank" class=" transition md:hover:scale-105 md:ml-3">
+			<a href="/cv.pdf" target="_blank" class="md:hover:scale-105 md:ml-3 fill-none stroke-current">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="mx-auto"
@@ -23,8 +23,6 @@
 					height="100"
 					viewBox="0 0 24 24"
 					stroke-width="1.5"
-					fill="hsl(var(--bc))"
-					stroke="hsl(var(--b1))"
 					stroke-linecap="round"
 					stroke-linejoin="round"
 				>

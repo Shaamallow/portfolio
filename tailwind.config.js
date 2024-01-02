@@ -30,6 +30,7 @@ module.exports = {
 					accent: '#179299', // teal
 					neutral: '#dce0e8', // crust
 					'base-100': '#eff1f5', // base
+					'base-200': '#64748b', // gray
 					info: '#209fb5', // sapphire
 					success: '#40a02b', // green
 					warning: '#df8e1d', // yellow
@@ -41,6 +42,7 @@ module.exports = {
 					accent: '#81c8be', // teal
 					neutral: '#232634', // crust
 					'base-100': '#303446', // base
+					'base-200': '#94a3b8', // gray
 					info: '#85c1dc', // sapphire
 					success: '#a6d189', // green
 					warning: '#e5c890', // yellow

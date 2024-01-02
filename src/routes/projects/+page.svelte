@@ -24,7 +24,7 @@
 					xmlns="http://www.w3.org/2000/svg"
 					x="0px"
 					y="0px"
-					fill="hsl(var(--bc))"
+					fill="currentColor"
 					width="100"
 					height="100"
 					viewBox="0 0 24 24"
@@ -52,7 +52,7 @@
 				class="w-58 md:h-[24rem] md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
       focus outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 transition duration-200 md:hover:scale-105"
 			>
-				<img src="/volleyball.jpg" alt="Volleyball" />
+				<img src="/projects/volleyball.jpg" alt="Volleyball" />
 			</div>
 		</a>
 
@@ -67,7 +67,7 @@
 				class="w-58 md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
 		focus:outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 transition duration-200 md:hover:scale-105"
 			>
-				<img src="/c2x.png" alt="Affiche Coupe de l'X" />
+				<img src="/projects/c2x.png" alt="Affiche Coupe de l'X" />
 			</div>
 		</a>
 
@@ -83,7 +83,7 @@
 				class="w-58 md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
 		focus:outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 transition duration-200 md:hover:scale-105"
 			>
-				<img src="/psc_logo.png" alt="Affiche Coupe de l'X" />
+				<img src="/projects/psc_logo.png" alt="Affiche Coupe de l'X" />
 			</div>
 		</a>
 

@@ -8,7 +8,6 @@
 			{$page.status}
 		</h1>
 		<div class="text-center max-w-md">{$page.error?.message}</div>
-		<div class="text-center max-w-md italic">Seems like I fucked up</div>
+		<div class="text-center max-w-md italic">Seems like something went wrong</div>
 	</div>
 </div>
-

@@ -18,6 +18,13 @@
 			More infromation will be coming here soon enough, in the meanwhile...
 		</p>
 
+		<div class="flex justify-center items-centery gap-2">
+			<a href="/posts/test" class="btn btn-ghost border-current">test</a>
+			<a href="/posts/post-2" class="btn btn-ghost border-current">long</a>
+			<a href="/posts/post-3" class="btn btn-ghost border-current">post-3</a>
+			<a href="/posts/post-4" class="btn btn-ghost border-current">post-4</a>
+		</div>
+
 		<div class="divider m-10" />
 
 		<h2 class="font-display text-center text-3xl md:text-5xl font-bold mb-5">Self-Hosting</h2>
@@ -53,7 +60,7 @@
 				/>
 			</a>
 			<a href="https://jellyfin.org" target="_blank">
-				<img src="/jellyfin.png" alt="jellyfin" class="mt-3 w-20" />
+				<img src="/logo/jellyfin.png" alt="jellyfin" class="mt-3 w-20" />
 			</a>
 
 			<a href="https://debian.org">
