@@ -77,11 +77,11 @@
 <main>
 	<div class="flex flex-col h-12 mb-10">
 		<div bind:this={navbar} class="navbar w-screen fixed h-12 z-10">
-			<div class="navbar-start">
+			<div class="navbar-start md:ml-40">
 				<a class="btn btn-ghost px-2 normal-case text-xl" href="/">Shaamallow</a>
 			</div>
 
-			<div class="navbar-end">
+			<div class="navbar-end md:mr-32">
 				<div class="mt-1 mr-2">
 					<label class="swap swap-rotate group">
 						<!-- this hidden checkbox controls the state -->
@@ -181,8 +181,10 @@
 	<slot />
 
 	<footer class="grid gap-4 grid-cols-3 items-center grid-rows-1 px-6 pb-4">
-		<div class="text-left text-base-200 text-sm p-2 col-span-2">© 2024 - Eyal Benaroche</div>
-		<div class="p-2 place-self-end">
+		<div class="text-left text-base-200 text-sm p-2 col-span-2 md:ml-36">
+			© 2024 - Eyal Benaroche
+		</div>
+		<div class="p-2 place-self-end md:mr-28">
 			<a href="https://github.com/Shaamallow/" target="_blank"
 				><svg
 					xmlns="http://www.w3.org/2000/svg"

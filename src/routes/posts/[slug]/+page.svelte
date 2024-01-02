@@ -33,7 +33,11 @@
 </script>
 
 {#if loaded}
-	<div in:fade={{ duration: 300, delay: 80 }} class="mx-auto pt-20 px-6" bind:this={mainDiv}>
+	<div
+		in:fade={{ duration: 300, delay: 80 }}
+		class="mx-auto pt-20 px-6 md:px-48"
+		bind:this={mainDiv}
+	>
 		<div class="flex flex-col items-start justify-stretch mx-auto">
 			<a class="text-sm text-base-200" href="/posts">Posts <span class="text-primary">/</span></a>
 			<h1
