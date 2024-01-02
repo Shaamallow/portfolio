@@ -4,7 +4,7 @@
 	import { afterNavigate } from '$app/navigation';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/stores';
-	import Dialog from '$lib/Dialog.svelte';
+	import Dialog from '$lib/components/Dialog.svelte';
 
 	import { lightTheme, toggleTheme } from '$lib/theme.ts';
 

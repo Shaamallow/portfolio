@@ -3,10 +3,26 @@
 	import { onMount } from 'svelte';
 	import { lightTheme } from '$lib/theme.ts';
 
+	import Card from '$lib/components/Card.svelte';
+
 	let loaded = false;
 	onMount(() => {
 		loaded = true;
 	});
+
+	let data = {
+		headers: {
+			title: 'I have a Very Long Title for this Card indeed',
+			date: '2021-08-01',
+			wallpaper: '/wallpaper2.jpg',
+			tags: ['test', 'test2', 'test3', 'iLoveToWriteTags', 'thisisaverylongtag']
+		},
+		body: {
+			content: 'test'
+		}
+	};
+
+	import { posts } from '$lib/data.ts';
 </script>
 
 <svelte:head>
@@ -27,12 +43,16 @@
 			</div>
 		</div>
 
-		<div class="divider my-[20rem]" />
+		<div class="divider my-10" />
 
-		<div class="flex flex-col items-center justify-stretch mb-10 group max-w-3xl mx-auto px-4">
-			<h1 class="font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary mb-3">
-				More on the website
-			</h1>
+		<h1 class="font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary mb-3 md:mb-8">
+			Recent
+		</h1>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start justify-stretch">
+			{#each [1, 2, 3, 4] as post}
+				<Card {data} />
+			{/each}
 		</div>
 
 		<div class="flex flex-col items-center justify-stretch mb-30 mt-20 group max-w-3xl mx-auto">
@@ -64,24 +84,5 @@
 				</a>
 			</div>
 		</div>
-
-		<!-- PROJECTS FROM HERE -->
-		<div class="divider m-10" />
-
-		<div class="flex flex-col items-center justify-stretch m-20 group max-w-3xl mx-auto">
-			<h1 class="font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary mb-10">
-				Recent Projects
-			</h1>
-
-			<a href="https://coupedelx.binets.fr" target="_blank">
-				<div
-					class="w-58 md:w-[45rem] rounded-[1rem] bg-neutral shadow-xl
-		focus:outline-2 focus:outline focus:outline-transparent overflow-hidden md:hover:translate-y-4 transition duration-200 md:hover:scale-105"
-				>
-					<img src="/projects/c2x.png" alt="Affiche Coupe de l'X" />
-				</div>
-			</a>
-		</div>
-		<div class="divider m-20" />
 	</div>
 {/if}

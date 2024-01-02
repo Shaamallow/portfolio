@@ -1,5 +1,4 @@
 import { error } from '@sveltejs/kit';
-import type { Load } from '@sveltejs/kit';
 
 import { posts } from '$lib/data';
 
@@ -15,6 +14,7 @@ export async function load({ params }: { params: { slug: string } }) {
 		headers: {
 			title: post.title,
 			wallpaper: post.wallpaper,
+			date: post.date,
 			tags: post.tags ? post.tags : []
 		},
 		body: {

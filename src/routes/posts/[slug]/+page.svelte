@@ -1,24 +1,21 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	$: status = $page.status;
-	$: error = $page.error;
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
 	let mainDiv: HTMLDivElement;
 
-	interface Data {
+	interface Post {
 		headers: {
 			title: string;
 			tags: string[];
 		};
 		body: {
 			content: string;
-			page: any;
 		};
 	}
 
-	export let data: Data;
+	export let data: Post;
 
 	let loaded = false;
 

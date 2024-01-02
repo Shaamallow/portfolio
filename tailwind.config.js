@@ -34,7 +34,7 @@ module.exports = {
 					accent: '#179299', // teal
 					neutral: '#dce0e8', // crust
 					'base-100': '#eff1f5', // base
-					'base-200': '#64748b', // gray
+					'base-200': '#3c4552', // gray
 					info: '#209fb5', // sapphire
 					success: '#40a02b', // green
 					warning: '#df8e1d', // yellow
