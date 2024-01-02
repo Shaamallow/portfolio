@@ -23,7 +23,6 @@
 	let loaded = false;
 
 	onMount(() => {
-		console.log(data);
 		loaded = true;
 
 		addEventListener('scroll', () => {
@@ -57,5 +56,7 @@
 		<p class="text-justify">{data.body.content}</p>
 		<p class="text-justify">{data.body.content}</p>
 		<p class="text-justify">{data.body.content}</p>
+
+		<div class="divider py-6" />
 	</div>
 {/if}

@@ -8,7 +8,11 @@ module.exports = {
 			serif: ['Merriweather', 'serif'],
 			display: ['Inter,sans-serif']
 		},
-		extend: {}
+		extend: {
+			aria: {
+				current: 'current=true'
+			}
+		}
 	},
 	darkMode: ['class', '[data-mode="catppuccin-frappe"]'],
 	plugins: [

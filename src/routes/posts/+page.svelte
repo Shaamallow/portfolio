@@ -1,5 +1,11 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
+
+	let loaded = false;
+	onMount(() => {
+		loaded = true;
+	});
 </script>
 
 <svelte:head>
@@ -11,7 +17,7 @@
 		<h1
 			class="font-display text-center text-5xl md:text-7xl font-bold bg-clip-text bg-secondary mb-3"
 		>
-			My Blog
+			Posts
 		</h1>
 
 		<p class="text-center m-5 italic">

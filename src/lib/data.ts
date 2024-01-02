@@ -2,6 +2,7 @@ export const posts = [
 	{
 		slug: 'test',
 		title: 'Post 1',
+		wallpaper: '/wallpaper3.jpg',
 		tags: ['Open-Source', 'Svelte', 'TypeScript', 'TailwindCSS', 'DaisyUI'],
 		content:
 			'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.'

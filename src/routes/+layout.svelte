@@ -1,15 +1,16 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
 	import { fade } from 'svelte/transition';
+	import { page } from '$app/stores';
 	import Dialog from '$lib/Dialog.svelte';
 
 	import { lightTheme, toggleTheme } from '$lib/theme.ts';
 
 	let navbar: HTMLDivElement;
-	let fader: HTMLDivElement;
 	let dialog: Dialog;
-	let themeatic = false;
+	let wallpaperPath: string;
 
 	onMount(() => {
 		addEventListener('scroll', () => {
@@ -22,10 +23,18 @@
 			if (navbar) {
 				navbar.style.backdropFilter = `blur(${blur}px)`;
 			}
-			if (fader) {
-				fader.style.backdropFilter = `blur(${blur}px)`;
-			}
 		});
+	});
+
+	afterNavigate(() => {
+		if ($page.route.id === '/posts/[slug]') {
+			wallpaperPath = $page.data.headers.wallpaper
+				? $page.data.headers.wallpaper // value from markdown file
+				: '/wallpaper2.jpg'; // default value for posts with no wallpaper
+
+			return;
+		}
+		wallpaperPath = '/wallpaper.jpg'; // default wallpaper for the website
 	});
 </script>
 
@@ -38,10 +47,30 @@
 		</button>
 	</form>
 	<div class="mx-auto flex flex-col justify-center">
-		<a class="btn btn-ghost text-xl" on:click={dialog.close()} href="/posts">Posts</a>
-		<a class="btn btn-ghost text-xl" on:click={dialog.close()} href="/projects">Projects</a>
-		<a class="btn btn-ghost text-xl" on:click={dialog.close()} href="/resume">Resume</a>
-		<a class="btn btn-ghost text-xl" on:click={dialog.close()} href="/contact">Contact</a>
+		<a
+			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
+			aria-current={$page.url.pathname === '/posts'}
+			on:click={dialog.close()}
+			href="/posts">Posts</a
+		>
+		<a
+			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
+			aria-current={$page.url.pathname === '/projects'}
+			on:click={dialog.close()}
+			href="/projects">Projects</a
+		>
+		<a
+			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
+			aria-current={$page.url.pathname === '/resume'}
+			on:click={dialog.close()}
+			href="/resume">Resume</a
+		>
+		<a
+			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
+			aria-current={$page.url.pathname === '/contact'}
+			on:click={dialog.close()}
+			href="/contact">Contact</a
+		>
 	</div>
 </Dialog>
 
@@ -101,10 +130,26 @@
 				</button>
 
 				<div class="hidden lg:flex">
-					<a class="btn btn-ghost" href="/posts">Posts</a>
-					<a class="btn btn-ghost" href="/projects">Projects</a>
-					<a class="btn btn-ghost" href="/resume">Resume</a>
-					<a class="btn btn-ghost" href="/contact">Contact</a>
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/posts'}
+						href="/posts">Posts</a
+					>
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/projects'}
+						href="/projects">Projects</a
+					>
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/resume'}
+						href="/resume">Resume</a
+					>
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/contact'}
+						href="/contact">Contact</a
+					>
 				</div>
 			</div>
 		</div>
@@ -130,7 +175,7 @@
 				transition:fade={{ duration: 200 }}
 			/>
 		{/if}
-		<img src="/wallpaper.jpg" alt="wallpaper" class="w-full h-[1000px] object-cover m-0 nozoom" />
+		<img src={wallpaperPath} alt="" class="w-full h-[1000px] object-cover m-0 nozoom" />
 	</div>
 
 	<slot />
@@ -138,7 +183,7 @@
 	<footer class="grid gap-4 grid-cols-3 items-center grid-rows-1 px-6 pb-4">
 		<div class="text-left text-base-200 text-sm p-2 col-span-2">© 2024 - Eyal Benaroche</div>
 		<div class="p-2 place-self-end">
-			<a href="https://github.com/Shaamallow/mammographml" target="_blank"
+			<a href="https://github.com/Shaamallow/" target="_blank"
 				><svg
 					xmlns="http://www.w3.org/2000/svg"
 					x="0px"

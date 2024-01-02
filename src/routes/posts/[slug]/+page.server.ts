@@ -14,6 +14,7 @@ export async function load({ params }: { params: { slug: string } }) {
 	return {
 		headers: {
 			title: post.title,
+			wallpaper: post.wallpaper,
 			tags: post.tags ? post.tags : []
 		},
 		body: {
