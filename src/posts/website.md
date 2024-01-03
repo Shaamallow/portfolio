@@ -18,29 +18,29 @@ I have come to a linking of being a system administrator and enjoy the benefits 
 
 ## The Stack
 
-<div class="flex justify-center items-center my-3 gap-4 md:gap-10">
-  <a href="https://svelte.dev" target="_blank">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png"
-      alt="svelte"
-      class="mt-3 w-20"
-    />
-  </a>
-  <a href="https://www.typescriptlang.org/" target="_blank">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
-      alt="typescript"
-      class="mt-3 w-20"
-    />
-  </a>
-  <a href="https://tailwindcss.com" target="_blank">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png"
-      alt="tailwind"
-      class="mt-3 w-20"
-    />
-  </a>
-</div>
+  <div class="flex justify-center items-center my-3 gap-4 md:gap-10">
+    <a href="https://svelte.dev" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png"
+        alt="svelte"
+        class="icon"
+      />
+    </a>
+    <a href="https://www.typescriptlang.org/" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
+        alt="typescript"
+        class="icon"
+      />
+    </a>
+    <a href="https://tailwindcss.com" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png"
+        alt="tailwind"
+        class="icon"
+      />
+    </a>
+  </div>
 
 I've tried to get into a <a href="https://reactjs.org" target="_blank">React</a> project once but I've been overwhelmed by the complexity of the framework. The project was very badly documented and I struggled to understand the codebase. Then came <a href="https://www.youtube.com/@Fireship" target='_blank'>Fireship</a> an <a href="https://www.youtube.com/watch?v=XRoSBWYMefY" target="_blank">American Youtuber</a> who makes videos mainly about web development in a short and concise 100s format and I discovered <a href="https://svelte.dev" target="_blank">Svelte</a> thanks to him - _if you don't know his channel go and check it out it is quite fun to say the least_ -.
 
@@ -52,27 +52,35 @@ Finally, after the 1st version of my website, I've decided to use <a href="https
 
 ## Self-hosting
 
-<div class="flex justify-center items-center my-3 gap-4 md:gap-10">
+<div class="flex  justify-center items-center my-3 gap-4 md:gap-10">
   <a href="https://docs.docker.com/" target="_blank">
     <img
       src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
       alt="docker"
-      class="mt-3 w-20"
+      class="icon"
     />
   </a>
   <a href="https://debian.org" target="_blank">
     <img
       src="https://cdn.iconscout.com/icon/free/png-256/free-debian-11-1175231.png"
       alt="debian"
-      class="mt-3 w-20"
+      class="icon"
     />
   </a>
   <a href="https://traefik.io/traefik/" target="_blank">
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Traefik.logo.png"
       alt="traefik"
-      class="mt-3 w-20"
+      class="icon"
     />
 </div>
 
 Finally, this website is running in a <a href="https://docs.docker.com/" target="_blank">Docker</a> container on my <a href="https://debian.org" target="_blank">Debian</a> server. I'm using <a href="https://traefik.io/traefik/" target="_blank">Traefik</a> as a reverse proxy to handle the https and the domain names. Along with a couple of other services for my convenience.
+
+<style>
+
+  .icon {
+    width: 5rem;
+    margin-top: 0.75rem;
+  }
+</style>

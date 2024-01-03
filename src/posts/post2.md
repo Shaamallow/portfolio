@@ -1,7 +1,7 @@
 ---
 title: Second file to make sure it works
 description: test file
-wallpaper: /wallpaper3.jpg
+wallpaper: /posts/autumn_valley.jpg
 date: '2023-01-03'
 tags:
   - sveltekit
