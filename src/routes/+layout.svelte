@@ -78,12 +78,6 @@
 			on:click={dialog.close()}
 			href="/resume">Resume</a
 		>
-		<a
-			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
-			aria-current={$page.url.pathname === '/contact'}
-			on:click={dialog.close()}
-			href="/contact">Contact</a
-		>
 	</div>
 </Dialog>
 
@@ -110,11 +104,6 @@
 						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
 						aria-current={$page.url.pathname === '/resume'}
 						href="/resume">Resume</a
-					>
-					<a
-						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/contact'}
-						href="/contact">Contact</a
 					>
 				</div>
 
