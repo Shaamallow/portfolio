@@ -42,7 +42,7 @@
 
 	<div class="divider m-10" />
 
-	<h2 class="font-display text-center text-3xl md:text-5xl font-bold mb-5">Self-Hosting</h2>
+	<h2 class="font-display text-3xl md:text-5xl font-bold mb-5">Self-Hosting</h2>
 
 	<p class="text-justify mb-5">
 		After a year at the Binet Réseau, I have come to a linking of being a system administrator and
@@ -50,7 +50,19 @@
 		a bunch of services on top of my own website.
 	</p>
 
-	<h3 class="font-display text-center text-2xl md:text-4xl font-bold mb-5">Stack & Services</h3>
+	<h3 class="flex font-display text-2xl md:text-4xl italic">
+		I use
+		<img
+			alt="neovim"
+			src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Neovim-mark.svg/1200px-Neovim-mark.svg.png"
+			class="mx-4 w-10"
+		/>
+		btw
+	</h3>
+
+	<div class="my-4" />
+
+	<h3 class="font-display text-2xl md:text-4xl font-bold">Stack & Services</h3>
 
 	<div class="flex justify-center items-center my-3 gap-4 md:gap-10">
 		<a href="https://docs.docker.com/" target="_blank">
@@ -77,8 +89,7 @@
 		<a href="https://jellyfin.org" target="_blank">
 			<img src="/logo/jellyfin.png" alt="jellyfin" class="mt-3 w-20" />
 		</a>
-
-		<a href="https://debian.org">
+		<a href="https://debian.org" target="_blank">
 			<img
 				src="https://cdn.iconscout.com/icon/free/png-256/free-debian-11-1175231.png"
 				alt="debian"
@@ -86,14 +97,4 @@
 			/>
 		</a>
 	</div>
-
-	<h3 class="flex items-center font-display text-2xl md:text-4xl font-bold mt-10">
-		<span>I use</span>
-		<img
-			alt="neovim"
-			src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Neovim-mark.svg/1200px-Neovim-mark.svg.png"
-			class="mx-4 w-10"
-		/>
-		<span>btw</span>
-	</h3>
 </main>

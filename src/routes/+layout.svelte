@@ -18,6 +18,14 @@
 			// add blur to navbar = 0.5 * scroll position
 
 			let scroll = window.scrollY;
+
+			if (scroll > 100) {
+				// add shadow to navbar
+				navbar.classList.add('shadow-md');
+			} else {
+				navbar.classList.remove('shadow-md');
+			}
+
 			let blur = scroll * 0.05;
 
 			if (navbar) {
@@ -82,7 +90,30 @@
 			</div>
 
 			<div class="navbar-end md:mr-32">
-				<div class="mt-1 mr-2">
+				<div class="hidden lg:flex">
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/posts'}
+						href="/posts">Posts</a
+					>
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/projects'}
+						href="/projects">Projects</a
+					>
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/resume'}
+						href="/resume">Resume</a
+					>
+					<a
+						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
+						aria-current={$page.url.pathname === '/contact'}
+						href="/contact">Contact</a
+					>
+				</div>
+
+				<div class="mt-1 lg:ml-2 mr-2">
 					<label class="swap swap-rotate group">
 						<!-- this hidden checkbox controls the state -->
 						<input
@@ -128,29 +159,6 @@
 						/></svg
 					>
 				</button>
-
-				<div class="hidden lg:flex">
-					<a
-						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/posts'}
-						href="/posts">Posts</a
-					>
-					<a
-						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/projects'}
-						href="/projects">Projects</a
-					>
-					<a
-						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/resume'}
-						href="/resume">Resume</a
-					>
-					<a
-						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/contact'}
-						href="/contact">Contact</a
-					>
-				</div>
 			</div>
 		</div>
 	</div>

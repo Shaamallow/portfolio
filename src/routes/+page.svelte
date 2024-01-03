@@ -13,6 +13,7 @@
 	let data = {
 		title: 'I have a Very Long Title for this Card indeed',
 		date: '2021-08-01',
+		slug: 'i-have-a-very-long-title-for-this-card-indeed',
 		wallpaper: '/wallpaper2.jpg',
 		tags: ['test', 'test2', 'test3', 'iLoveToWriteTags', 'thisisaverylongtag']
 	};
