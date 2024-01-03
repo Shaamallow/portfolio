@@ -21,7 +21,8 @@ module.exports = {
 		require('@catppuccin/tailwindcss')({
 			prefix: 'ctp',
 			defaultFlavour: 'frappe'
-		})
+		}),
+		require('@tailwindcss/typography')
 	],
 	daisyui: {
 		themes: [

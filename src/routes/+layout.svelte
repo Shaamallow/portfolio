@@ -11,6 +11,7 @@
 	let navbar: HTMLDivElement;
 	let dialog: Dialog;
 	let wallpaperPath: string;
+	let footDiv: HTMLElement;
 
 	onMount(() => {
 		addEventListener('scroll', () => {
@@ -31,13 +32,17 @@
 			if (navbar) {
 				navbar.style.backdropFilter = `blur(${blur}px)`;
 			}
+			if (footDiv) {
+				footDiv.style.backdropFilter = `blur(${blur}px)`;
+			}
 		});
 	});
 
 	afterNavigate(() => {
+		console.log('page');
 		if ($page.route.id === '/posts/[slug]') {
-			wallpaperPath = $page.data.headers.wallpaper
-				? $page.data.headers.wallpaper // value from markdown file
+			wallpaperPath = $page.data.meta.wallpaper
+				? $page.data.meta.wallpaper // value from markdown file
 				: '/wallpaper2.jpg'; // default value for posts with no wallpaper
 
 			return;
@@ -188,7 +193,7 @@
 
 	<slot />
 
-	<footer class="grid gap-4 grid-cols-3 items-center grid-rows-1 px-6 pb-4">
+	<footer class="grid gap-4 grid-cols-3 items-center grid-rows-1 px-6 pb-4" bind:this={footDiv}>
 		<div class="text-left text-base-200 text-sm p-2 col-span-2 md:ml-36">
 			© 2024 - Eyal Benaroche
 		</div>

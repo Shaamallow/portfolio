@@ -1,24 +1,22 @@
 # Portfolio
 
-## Setup a Svelte Project
+My personal portfolio website made with Svelte and Tailwind.
 
 ```bash
-# create a new project with usual config in the current directory
-npm create svelte@latest
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-npm i -D daisyui@latest
-npm install -D @catppuccin/tailwindcss
+# git clone
+git clone git@github.com/Shaamallow/portfolio.git
+cd portfolio
+npm install
 ```
 
-Don't forget to add the dependencies to `package.json` and `tailwind.config.js`.
-
-### References
+### The Stack
 
 - [Svelte](https://svelte.dev/)
 - [Tailwind](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [Catppuccin-Tailwindcss](https://github.com/catppuccin/tailwindcss)
+- [MDsveX](https://github.com/pngwn/MDsveX)
+- [Tailwind/Typography](https://tailwindcss.com/docs/typography-plugin)
 
 ### Developing
 

@@ -7,20 +7,15 @@
 
 	let loaded = false;
 	onMount(() => {
+		console.log(data);
 		loaded = true;
 	});
 
-	let data = {
-		title: 'I have a Very Long Title for this Card indeed',
-		date: '2021-08-01',
-		slug: 'i-have-a-very-long-title-for-this-card-indeed',
-		wallpaper: '/wallpaper2.jpg',
-		tags: ['test', 'test2', 'test3', 'iLoveToWriteTags', 'thisisaverylongtag']
-	};
+	export let data;
 </script>
 
 <svelte:head>
-	<title>shaamallow</title>
+	<title>Shaamallow</title>
 </svelte:head>
 
 {#if loaded}
@@ -87,8 +82,8 @@
 		</h1>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start justify-stretch">
-			{#each [1, 2, 3, 4] as post}
-				<Card {data} />
+			{#each data.posts as post}
+				<Card data={post} />
 			{/each}
 		</div>
 
@@ -96,30 +91,6 @@
 			<h1 class="font-display text-xl md:text-3xl font-bold bg-clip-text bg-secondary mb-3">
 				The Tech Stack
 			</h1>
-
-			<div class="flex justify-center items-center my-3 gap-4 md:gap-10">
-				<a href="https://svelte.dev" target="_blank">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/199px-Svelte_Logo.svg.png"
-						alt="svelte"
-						class="mt-3 w-20"
-					/>
-				</a>
-				<a href="https://www.typescriptlang.org/" target="_blank">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"
-						alt="typescript"
-						class="mt-3 w-20"
-					/>
-				</a>
-				<a href="https://tailwindcss.com" target="_blank">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png"
-						alt="tailwind"
-						class="mt-3 w-20"
-					/>
-				</a>
-			</div>
 		</div>
 	</div>
 {/if}

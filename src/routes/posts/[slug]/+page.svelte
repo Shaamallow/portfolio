@@ -2,22 +2,13 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { formatDate } from '$lib/utils';
 
 	let mainDiv: HTMLDivElement;
 
-	interface Post {
-		headers: {
-			title: string;
-			tags: string[];
-		};
-		body: {
-			content: string;
-		};
-	}
-
-	export let data: Post;
-
 	let loaded = false;
+
+	export let data;
 
 	onMount(() => {
 		loaded = true;
@@ -32,6 +23,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{data.meta.title}</title>
+</svelte:head>
+
 {#if loaded}
 	<div
 		in:fade={{ duration: 300, delay: 80 }}
@@ -43,21 +38,31 @@
 			<h1
 				class="font-display text-3xl md:text-5xl font-bold bg-clip-text bg-secondary group-hover:text-transparent anim-gradient pb-3"
 			>
-				{data.headers.title}
+				{data.meta.title}
 			</h1>
-			<div class="text-center max-w-md mb-2" id="author">Eyal Benaroche</div>
+			<div class="text-base mb-2">{data.meta.description}</div>
+			<div class="text-center max-w-md text-base-200" id="author">Eyal Benaroche</div>
+			<div class="text-center max-w-md mb-2 text-base-200" id="date">
+				{formatDate(data.meta.date)}
+			</div>
 			<div id="tags" class="flex flex-wrap gap-2 items-start">
-				{#each data.headers.tags as tag}
+				{#each data.meta.tags as tag}
 					<div class="border-current border p-1 rounded-md text-xs text-primary">{tag}</div>
 				{/each}
 			</div>
 		</div>
 
 		<div class="divider" />
-		<p class="text-justify">{data.body.content}</p>
-		<p class="text-justify">{data.body.content}</p>
-		<p class="text-justify">{data.body.content}</p>
 
-		<div class="divider py-6" />
+		<article>
+			<div class="prose">
+				<svelte:component this={data.content} />
+			</div>
+		</article>
+
+		<div class="divider mb-0 pb-6" />
 	</div>
 {/if}
+
+<style>
+</style>
