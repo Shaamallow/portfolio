@@ -5,12 +5,6 @@
 	import Card from '$lib/components/Card.svelte';
 
 	export let data;
-
-	let loaded = false;
-
-	onMount(() => {
-		loaded = true;
-	});
 </script>
 
 <svelte:head>
@@ -29,10 +23,6 @@
 			<Card data={post} />
 		{/each}
 	</div>
-
-	<div class="my-10" />
-
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start justify-stretch" />
 
 	<div class="divider m-10" />
 </main>

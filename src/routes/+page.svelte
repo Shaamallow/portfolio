@@ -2,12 +2,30 @@
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { lightTheme } from '$lib/theme.ts';
+	import type { Post } from '$lib/types';
 
 	import Card from '$lib/components/Card.svelte';
 
 	let loaded = false;
+	let merged: Post[];
+
 	onMount(() => {
-		console.log(data);
+		// merge posts and projects into one array
+		// and sort them by date
+
+		let posts = data.posts;
+		let projects = data.projects;
+
+		merged = posts.concat(projects);
+
+		merged.sort(
+			(first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
+		);
+
+		// then truncate the array to 6 elements
+		// to only show the 6 most recent posts
+		merged = merged.slice(0, 6);
+
 		loaded = true;
 	});
 
@@ -82,15 +100,11 @@
 		</h1>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start justify-stretch">
-			{#each data.posts as post}
+			{#each merged as post}
 				<Card data={post} />
 			{/each}
 		</div>
 
-		<div class="flex flex-col items-center justify-stretch mb-30 mt-20 group max-w-3xl mx-auto">
-			<h1 class="font-display text-xl md:text-3xl font-bold bg-clip-text bg-secondary mb-3">
-				The Tech Stack
-			</h1>
-		</div>
+		<div class="divider m-10" />
 	</div>
 {/if}
