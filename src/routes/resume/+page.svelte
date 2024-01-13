@@ -43,7 +43,7 @@
 			<tbody>
 				<tr>
 					<td>
-						<div class="w-120 bg-white flex items-center justify-center rounded">
+						<div class="w-[120px] bg-white flex items-center justify-center rounded">
 							<div
 								class="w-[110px] h-[120px] bg-contain bg-no-repeat bg-center rounded"
 								style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/5/53/Fujitsu-Logo.svg)"
@@ -71,10 +71,8 @@
 					</td>
 
 					<td>
-						<a
-							href="https://lyc-hoche-versailles.ac-versailles.fr/spip.php?rubrique5"
-							target="_blank"
-							class="font-bold text-md text-primary">Binet Réseau</a
+						<a href="https://br.binets.fr/" target="_blank" class="font-bold text-md text-primary"
+							>Binet Réseau</a
 						>
 					</td>
 					<td> System Administrator & Treasurer </td>
