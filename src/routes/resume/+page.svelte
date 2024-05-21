@@ -12,7 +12,8 @@
 	</h1>
 
 	<p class="text-left m-5 italic">
-		I'm Eyal Benaroche, a third year engineering student at Ecole Polytechnique.
+		I'm Eyal Benaroche, a third year engineering student at Ecole Polytechnique and Research
+		Scientist working at Clipdrop
 	</p>
 
 	<div class="flex gap-5">
@@ -43,6 +44,22 @@
 			<tbody>
 				<tr>
 					<td>
+						<div class="w-[120px] h-[120px] bg-black flex items-end justify-center rounded">
+							<div
+								class="w-[120px] h-[100px] bg-cover bg-no-repeat bg-center rounded"
+								style="background-image:url(https://static.clipdrop.co/web/homepage/preview.jpg)"
+							/>
+						</div>
+					</td>
+					<td><a href="https://clipdrop.co/" class="font-bold text-md text-primary">Clipdrop</a></td
+					>
+					<td>Research Scientist</td>
+					<td>April 2024 - August 2024</td>
+					<td>Hybrid, Paris, France</td>
+				</tr>
+
+				<tr>
+					<td>
 						<div class="w-[120px] bg-white flex items-center justify-center rounded">
 							<div
 								class="w-[110px] h-[120px] bg-contain bg-no-repeat bg-center rounded"
@@ -55,7 +72,7 @@
 							>Fujitsu Limited</a
 						></td
 					>
-					<td> Behavioural Analysis Researcher </td>
+					<td>Behavioural Analysis Researcher</td>
 					<td>Summer 2023</td>
 					<td>Hybrid, Tokyo, Japan</td>
 				</tr>
@@ -95,7 +112,7 @@
 							href="https://courserictabarly.esperancebanlieues.org/"
 							target="_blank"
 							class="font-bold text-md text-primary">Cours Eric Tabarly</a
-						>
+						> (Non Profit)
 					</td>
 					<td>Teacher</td>
 					<td>October 2021 - April 2022</td>
@@ -121,6 +138,29 @@
 			</thead>
 
 			<tbody>
+				<tr>
+					<td>
+						<div class="w-[120px] h-[160px] bg-white flex items-center justify-center rounded">
+							<div
+								class="w-[120px] h-[160px] bg-contain bg-no-repeat bg-center rounded"
+								style="background-image:url(https://etudestech.com/wp-content/uploads/2022/11/mines-paris.png)"
+							/>
+						</div>
+					</td>
+					<td
+						><a
+							href="https://www.minesparis.psl.eu/"
+							class="font-bold text-md text-primary"
+							target="_blank">Ecole Des Mines de Paris</a
+						></td
+					>
+					<td>
+						<div class="border-b pb-2 mb-2 border-base-300">Engineering Degree</div>
+						<div>Master of Science in Engineering</div>
+					</td>
+					<td>2024-2025</td>
+				</tr>
+
 				<tr>
 					<td>
 						<div
@@ -158,8 +198,14 @@
 						>
 					</td>
 					<td>
-						<div class="border-b pb-2 mb-2 border-base-300">Classe Préparatoire PCSI - PSI</div>
-						<div>Bachelor of Science (Physics & Engineering)</div>
+						<div class="border-b pb-2 mb-2 border-base-300">Classe Préparatoire PCSI - PSI*</div>
+						<div>
+							Preparatory Classes <a
+								class="underline text-primary"
+								href="https://en.wikipedia.org/wiki/Classe_pr%C3%A9paratoire_aux_grandes_%C3%A9coles"
+								target="_blank">(more details)</a
+							>
+						</div>
 					</td>
 					<td>2021-2023</td>
 				</tr>

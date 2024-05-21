@@ -15,7 +15,7 @@
 </script>
 
 <div
-	class="min-h-full border border-base-200 rounded shadow-2xl backdrop-blur hover:scale-105 transition ease-in-out duration-200"
+	class="min-h-full border border-base-200 rounded shadow-2xl backdrop-blur hover:scale-105 transition ease-in-out duration-200 overflow-hidden"
 >
 	<a href={link} target={data.url ? '_blank' : '_self'} rel="noreferrer">
 		<div
