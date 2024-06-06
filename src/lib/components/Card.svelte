@@ -29,11 +29,15 @@
 			<div id="tags" class="flex flex-wrap gap-2 my-2 items-start">
 				{#each data.tags as tag}
 					{#if tag.toLowerCase() == 'external'}
-						<div class="border-current border p-1 rounded-md text-xs text-error">
+						<div class="border-current border p-1 rounded-md text-xs text-warning">
 							{tag.toLowerCase()}
 						</div>
 					{:else if tag.toLowerCase() == 'github'}
 						<div class="border-current border p-1 rounded-md text-xs text-accent">
+							{tag.toLowerCase()}
+						</div>
+					{:else if tag.toLowerCase() == 'arxiv'}
+						<div class="border-current border p-1 rounded-md text-xs text-error">
 							{tag.toLowerCase()}
 						</div>
 					{:else}
