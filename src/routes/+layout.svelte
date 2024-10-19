@@ -160,24 +160,24 @@
 	<div class="fixed inset-x-0 top-0" style="z-index: -10;">
 		{#if $lightTheme}
 			<div
-				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral to-transparent mix-blend-normal"
+				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral to-transparent mix-blend-normal"
 				transition:fade={{ duration: 200 }}
 			/>
 			<div
-				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-neutral-100 mix-blend-normal"
+				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral-800 to-neutral-100 mix-blend-normal"
 				transition:fade={{ duration: 200 }}
 			/>
 		{:else}
 			<div
-				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-transparent mix-blend-normal"
+				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral-800 to-transparent mix-blend-normal"
 				transition:fade={{ duration: 200 }}
 			/>
 			<div
-				class="opacity-60 absolute inset-x-0 h-[1000px] bg-gradient-to-t from-neutral-800 to-neutral-800 mix-blend-normal"
+				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral-800 to-neutral-800 mix-blend-normal"
 				transition:fade={{ duration: 200 }}
 			/>
 		{/if}
-		<img src={wallpaperPath} alt="" class="w-full h-[1000px] object-cover m-0 nozoom" />
+		<img src={wallpaperPath} alt="" class="w-full h-[100vh] object-cover m-0 nozoom" />
 	</div>
 
 	<slot />

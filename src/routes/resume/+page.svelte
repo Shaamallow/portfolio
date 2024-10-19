@@ -44,14 +44,19 @@
 			<tbody>
 				<tr>
 					<td>
-						<div class="w-[120px] h-[120px] bg-black flex items-end justify-center rounded">
-							<div
-								class="w-[120px] h-[100px] bg-cover bg-no-repeat bg-center rounded"
-								style="background-image:url(https://static.clipdrop.co/web/homepage/preview.jpg)"
-							/>
-						</div>
+						<div
+							class="w-[120px] h-[100px] bg-cover bg-no-repeat bg-center rounded"
+							style="background-image:url(https://static.clipdrop.co/web/homepage/preview.jpg)"
+						/>
 					</td>
-					<td><a href="https://clipdrop.co/" class="font-bold text-md text-primary">Clipdrop</a></td
+					<td
+						><a href="https://clipdrop.co/" class="font-bold text-md text-primary" target="_blank"
+							>Clipdrop</a
+						>
+						by
+						<a href="https://jasper.ai" class="font-bold text-md text-primary" target="_blank"
+							>Jasper</a
+						></td
 					>
 					<td>Research Scientist</td>
 					<td>April 2024 - August 2024</td>
@@ -68,11 +73,13 @@
 						</div>
 					</td>
 					<td
-						><a href="https://www.fujitsu.com/global/" class="font-bold text-md text-primary"
-							>Fujitsu Limited</a
+						><a
+							href="https://www.fujitsu.com/global/"
+							class="font-bold text-md text-primary"
+							target="_blank">Fujitsu Limited</a
 						></td
 					>
-					<td>Behavioural Analysis Researcher</td>
+					<td>Research Scientist</td>
 					<td>Summer 2023</td>
 					<td>Hybrid, Tokyo, Japan</td>
 				</tr>
