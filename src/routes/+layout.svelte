@@ -51,6 +51,14 @@
 	});
 </script>
 
+<svelte:head>
+	<script
+		defer
+		src="https://umami.shaamallow.com/script.js"
+		data-website-id="e34c7689-948a-41bf-a3c9-2b0599489ade"
+	></script>
+</svelte:head>
+
 <Dialog bind:dialog>
 	<form method="dialog">
 		<button class="btn btn-sm btn-circle btn-ghost absolute right-5 top-5"
