@@ -44,6 +44,32 @@
 			<tbody>
 				<tr>
 					<td>
+						<div class="w-[120px] bg-white flex items-center justify-center rounded">
+							<div
+								class="w-[110px] h-[120px] bg-contain bg-no-repeat bg-center rounded"
+								style="background-image:url(https://blog.logomyway.com/wp-content/uploads/2021/11/meta-logo.png)"
+							/>
+						</div>
+					</td>
+					<td
+						><a
+							href="https://ai.meta.com/research/"
+							class="font-bold text-md text-primary"
+							target="_blank">FAIR</a
+						>,
+						<a
+							href="https://www.metacareers.com/"
+							class="font-bold text-md text-primary"
+							target="_blank">Meta</a
+						></td
+					>
+					<td>Research Scientist Intern</td>
+					<td>April 2025 - September 2025</td>
+					<td>Hybrid, Paris, France</td>
+				</tr>
+
+				<tr>
+					<td>
 						<div
 							class="w-[120px] h-[100px] bg-cover bg-no-repeat bg-center rounded"
 							style="background-image:url(https://static.clipdrop.co/web/homepage/preview.jpg)"
@@ -58,7 +84,7 @@
 							>Jasper</a
 						></td
 					>
-					<td>Research Scientist</td>
+					<td>Research Scientist Intern</td>
 					<td>April 2024 - August 2024</td>
 					<td>Hybrid, Paris, France</td>
 				</tr>
@@ -79,7 +105,7 @@
 							target="_blank">Fujitsu Limited</a
 						></td
 					>
-					<td>Research Scientist</td>
+					<td>Research Scientist Intern</td>
 					<td>Summer 2023</td>
 					<td>Hybrid, Tokyo, Japan</td>
 				</tr>
