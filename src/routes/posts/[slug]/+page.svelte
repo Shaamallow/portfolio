@@ -4,11 +4,11 @@
 	import { fade } from 'svelte/transition';
 	import { formatDate } from '$lib/utils';
 
-	let mainDiv: HTMLDivElement;
+	let mainDiv: HTMLDivElement = $state();
 
-	let loaded = false;
+	let loaded = $state(false);
 
-	export let data;
+	let { data } = $props();
 
 	onMount(() => {
 		loaded = true;
@@ -52,15 +52,15 @@
 			</div>
 		</div>
 
-		<div class="divider" />
+		<div class="divider"></div>
 
 		<article>
 			<div class="prose">
-				<svelte:component this={data.content} />
+				<data.content />
 			</div>
 		</article>
 
-		<div class="divider mb-0 pb-6" />
+		<div class="divider mb-0 pb-6"></div>
 	</div>
 {/if}
 

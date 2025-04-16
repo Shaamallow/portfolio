@@ -4,7 +4,7 @@
 
 	import Card from '$lib/components/Card.svelte';
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -24,5 +24,5 @@
 		{/each}
 	</div>
 
-	<div class="divider m-10" />
+	<div class="divider m-10"></div>
 </main>

@@ -3,15 +3,20 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { fade } from 'svelte/transition';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Dialog from '$lib/components/Dialog.svelte';
 
 	import { lightTheme, toggleTheme } from '$lib/theme.ts';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
 
-	let navbar: HTMLDivElement;
-	let dialog: Dialog;
-	let wallpaperPath: string;
-	let footDiv: HTMLElement;
+	let { children }: Props = $props();
+
+	let navbar: HTMLDivElement = $state();
+	let dialog: Dialog = $state();
+	let wallpaperPath: string = $state();
+	let footDiv: HTMLElement = $state();
 
 	onMount(() => {
 		addEventListener('scroll', () => {
@@ -40,9 +45,9 @@
 
 	afterNavigate(() => {
 		console.log('page');
-		if ($page.route.id === '/posts/[slug]') {
-			wallpaperPath = $page.data.meta.wallpaper
-				? $page.data.meta.wallpaper // value from markdown file
+		if (page.route.id === '/posts/[slug]') {
+			wallpaperPath = page.data.meta.wallpaper
+				? page.data.meta.wallpaper // value from markdown file
 				: '/wallpaper2.jpg'; // default value for posts with no wallpaper
 
 			return;
@@ -70,20 +75,20 @@
 	<div class="mx-auto flex flex-col justify-center">
 		<a
 			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
-			aria-current={$page.url.pathname === '/posts'}
-			on:click={dialog.close()}
+			aria-current={page.url.pathname === '/posts'}
+			onclick={dialog.close()}
 			href="/posts">Posts</a
 		>
 		<a
 			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
-			aria-current={$page.url.pathname === '/projects'}
-			on:click={dialog.close()}
+			aria-current={page.url.pathname === '/projects'}
+			onclick={dialog.close()}
 			href="/projects">Projects</a
 		>
 		<a
 			class="btn btn-ghost aria-current:underline decoration-2 underline-offset-8 text-xl"
-			aria-current={$page.url.pathname === '/resume'}
-			on:click={dialog.close()}
+			aria-current={page.url.pathname === '/resume'}
+			onclick={dialog.close()}
 			href="/resume">Resume</a
 		>
 	</div>
@@ -100,17 +105,17 @@
 				<div class="hidden lg:flex">
 					<a
 						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/posts'}
+						aria-current={page.url.pathname === '/posts'}
 						href="/posts">Posts</a
 					>
 					<a
 						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/projects'}
+						aria-current={page.url.pathname === '/projects'}
 						href="/projects">Projects</a
 					>
 					<a
 						class="btn btn-ghost aria-current:underline decoration-2 underline-offset-[6px]"
-						aria-current={$page.url.pathname === '/resume'}
+						aria-current={page.url.pathname === '/resume'}
 						href="/resume">Resume</a
 					>
 				</div>
@@ -122,7 +127,7 @@
 							type="checkbox"
 							class="theme-controller"
 							value="catppuccin-latte"
-							on:change={toggleTheme}
+							onchange={toggleTheme}
 						/>
 						<!-- sun icon -->
 						<svg
@@ -146,7 +151,7 @@
 					</label>
 				</div>
 
-				<button class="btn btn-ghost lg:hidden" on:click={() => dialog.showModal()}>
+				<button class="btn btn-ghost lg:hidden" onclick={() => dialog.showModal()}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-7 w-7"
@@ -170,25 +175,25 @@
 			<div
 				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral to-transparent mix-blend-normal"
 				transition:fade={{ duration: 200 }}
-			/>
+			></div>
 			<div
 				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral-800 to-neutral-100 mix-blend-normal"
 				transition:fade={{ duration: 200 }}
-			/>
+			></div>
 		{:else}
 			<div
 				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral-800 to-transparent mix-blend-normal"
 				transition:fade={{ duration: 200 }}
-			/>
+			></div>
 			<div
 				class="opacity-60 absolute inset-x-0 h-[100vh] bg-gradient-to-t from-neutral-800 to-neutral-800 mix-blend-normal"
 				transition:fade={{ duration: 200 }}
-			/>
+			></div>
 		{/if}
 		<img src={wallpaperPath} alt="" class="w-full h-[100vh] object-cover m-0 nozoom" />
 	</div>
 
-	<slot />
+	{@render children?.()}
 
 	<footer class="grid gap-4 grid-cols-3 items-center grid-rows-1 px-6 pb-4" bind:this={footDiv}>
 		<div class="text-left text-base-200 text-sm p-2 col-span-2 md:ml-36">

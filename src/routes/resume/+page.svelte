@@ -25,7 +25,7 @@
 		</a>
 	</div>
 
-	<div class="divider mb-10" />
+	<div class="divider mb-10"></div>
 
 	<h3 class="font-display text-left text-xl md:text-3xl font-bold mb-3">Experience</h3>
 
@@ -48,7 +48,7 @@
 							<div
 								class="w-[110px] h-[120px] bg-contain bg-no-repeat bg-center rounded"
 								style="background-image:url(https://blog.logomyway.com/wp-content/uploads/2021/11/meta-logo.png)"
-							/>
+							></div>
 						</div>
 					</td>
 					<td
@@ -73,7 +73,7 @@
 						<div
 							class="w-[120px] h-[100px] bg-cover bg-no-repeat bg-center rounded"
 							style="background-image:url(https://static.clipdrop.co/web/homepage/preview.jpg)"
-						/>
+						></div>
 					</td>
 					<td
 						><a href="https://clipdrop.co/" class="font-bold text-md text-primary" target="_blank"
@@ -95,7 +95,7 @@
 							<div
 								class="w-[110px] h-[120px] bg-contain bg-no-repeat bg-center rounded"
 								style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/5/53/Fujitsu-Logo.svg)"
-							/>
+							></div>
 						</div>
 					</td>
 					<td
@@ -116,7 +116,7 @@
 							<div
 								class="w-[101px] h-[100px] bg-cover bg-center rounded"
 								style="background-image:url(/logo/binet_reseau.png)"
-							/>
+							></div>
 						</div>
 					</td>
 
@@ -136,7 +136,7 @@
 							<div
 								class="w-[80px] h-[110px] bg-cover bg-center rounded"
 								style="background-image:url(https://esperancebanlieues.org/wp-content/uploads/2020/06/LOGO.png)"
-							/>
+							></div>
 						</div>
 					</td>
 
@@ -155,7 +155,7 @@
 		</table>
 	</div>
 
-	<div class="divider my-10" />
+	<div class="divider my-10"></div>
 
 	<h3 class="font-display text-left text-xl md:text-3xl font-bold mb-3">Academics</h3>
 
@@ -177,7 +177,7 @@
 							<div
 								class="w-[120px] h-[160px] bg-contain bg-no-repeat bg-center rounded"
 								style="background-image:url(https://etudestech.com/wp-content/uploads/2022/11/mines-paris.png)"
-							/>
+							></div>
 						</div>
 					</td>
 					<td
@@ -199,7 +199,7 @@
 						<div
 							class="w-[120px] h-[160px] bg-cover bg-center rounded"
 							style="background-image:url(https://upload.wikimedia.org/wikipedia/fr/2/2a/Polytechnique_logo_2013.svg)"
-						/>
+						></div>
 					</td>
 					<td
 						><a
@@ -220,7 +220,7 @@
 						<div
 							class="w-[120px] h-[160px] bg-cover bg-center rounded"
 							style="background-image:url(https://upload.wikimedia.org/wikipedia/commons/5/5c/Lyc%C3%A9e_Hoche_%C3%A0_Versailles_le_19_septembre_2015_-_10_%28Cropped%29.jpg)"
-						/>
+						></div>
 					</td>
 
 					<td>

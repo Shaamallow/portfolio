@@ -6,8 +6,8 @@
 
 	import Card from '$lib/components/Card.svelte';
 
-	let loaded = false;
-	let merged: Post[];
+	let loaded = $state(false);
+	let merged: Post[] = $state();
 
 	onMount(() => {
 		// merge posts and projects into one array
@@ -29,7 +29,7 @@
 		loaded = true;
 	});
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -93,7 +93,7 @@
 			</div>
 		</div>
 
-		<div class="my-10" />
+		<div class="my-10"></div>
 
 		<h1 class="font-display text-2xl md:text-4xl font-bold bg-clip-text bg-secondary mb-3 md:mb-8">
 			Recent
@@ -105,6 +105,6 @@
 			{/each}
 		</div>
 
-		<div class="divider m-10" />
+		<div class="divider m-10"></div>
 	</div>
 {/if}

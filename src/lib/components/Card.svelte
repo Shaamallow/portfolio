@@ -2,8 +2,12 @@
 	import type { Post } from '$lib/types';
 	import { formatDate } from '$lib/utils';
 
-	export let data: Post;
-	let link: string;
+	interface Props {
+		data: Post;
+	}
+
+	let { data }: Props = $props();
+	let link: string = $state();
 
 	// conditional link on presence of url or not
 
@@ -21,7 +25,7 @@
 		<div
 			class="w-full h-[200px] bg-cover bg-center"
 			style="background-image:url({data.wallpaper})"
-		/>
+		></div>
 		<div class="m-4 mb-8">
 			<div class="font-bold text-xl">{data.title}</div>
 			<div class="text-base-200 overflow-hidden w-full h-12">{data.description}</div>
